@@ -21,13 +21,16 @@ echo "========================================================================"
 : "${VSF_API_SERVER_PORT:?}"
 : "${VSF_API_WEB_HOST:?}"
 : "${VSF_API_WEB_PROTOCOL:?}"
+: "${PROJECT_NAME:?}"
 : "${VSF_FRONT_SERVER_IP:?}"
 : "${VSF_FRONT_SERVER_PORT:?}"
 : "${VSF_FRONT_WEB_HOST:?}"
 : "${VSF_FRONT_WEB_PROTOCOL:?}"
 # local context vars
-DIR_APPS="/home/${USER}"
+DIR_APPS="/home/${USER}/vue/${PROJECT_NAME}"
 DIR_VSF="${DIR_APPS}/vue-storefront"
+rm -rf "${DIR_VSF}"
+mkdir -p "${DIR_APPS}" || exit 255
 
 echo "========================================================================"
 echo "Clone 'vue-storefront' application."

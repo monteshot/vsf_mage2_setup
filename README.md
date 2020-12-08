@@ -1,7 +1,8 @@
 # vsf_mage2_setup
 Set of scripts to automate binding of Vue Storefront PWA with Magento 2 backend. 
 
-**Attention: this project is not ready to use, it is under development yet.**
+**Attention: this project is not ready to use, it is under development yet.**  
+Fork of https://github.com/flancer64/vsf_mage2_setup
 
 ## Setup on standalone host
 
@@ -19,7 +20,7 @@ There are 5 steps for now:
 
 ## Usage
 ```
-$ git clone https://github.com/flancer64/vsf_mage2_setup.git
+$ git clone https://github.com/monteshot/vsf_mage2_setup.git
 $ cd ./vsf_mage2_setup
 $ cat > cfg.local.sh                # or
 $ cp cfg.init.sh cfg.local.sh

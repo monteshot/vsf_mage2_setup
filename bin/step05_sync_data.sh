@@ -19,9 +19,10 @@ echo "========================================================================"
 : "${MAGE_API_ACCESS_TOKEN_SECRET:?}"
 : "${MAGE_API_CONSUMER_KEY:?}"
 : "${MAGE_API_CONSUMER_SECRET:?}"
+: "${PROJECT_NAME:?}"
 : "${MAGE_URL_REST:?}"
 # local context vars
-DIR_APPS="/home/${USER}"
+DIR_APPS="/home/${USER}/vue/${PROJECT_NAME}"
 DIR_API="${DIR_APPS}/vue-storefront-api"
 DIR_M2V="${DIR_APPS}/mage2vuestorefront"
 

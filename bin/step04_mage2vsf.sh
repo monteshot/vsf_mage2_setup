@@ -14,6 +14,7 @@ echo "========================================================================"
 . "${DIR_ROOT}/cfg.local.sh"
 # check external vars used in this script (see cfg.[work|live].sh)
 : "${ES_INDEX_NAME:?}"
+: "${PROJECT_NAME:?}"
 : "${ES_URL:?}"
 : "${MAGE_API_ACCESS_TOKEN:?}"
 : "${MAGE_API_ACCESS_TOKEN_SECRET:?}"
@@ -21,8 +22,9 @@ echo "========================================================================"
 : "${MAGE_API_CONSUMER_SECRET:?}"
 : "${MAGE_URL_REST:?}"
 # local context vars
-DIR_APPS="/home/${USER}"
+DIR_APPS="/home/${USER}/vue/${PROJECT_NAME}"
 DIR_M2V="${DIR_APPS}/mage2vuestorefront"
+rm -rf "${DIR_M2V}"
 
 echo "========================================================================"
 echo "Clone 'mage2vuestorefront' application."
