@@ -3,18 +3,24 @@
 #   Local configuration template.
 #   Copy this file to `./cfg.local.sh`.
 # =========================================================================
-
+# System
+export NODE_TLS_REJECT_UNAUTHORIZED=0
+# Magento
+export MAGE_HOST="magento24.loc"
+export MAGE_URL_REST="https://${MAGE_HOST}/rest"
+export MAGE_URL_IMG="https://${MAGE_HOST}/media/catalog/product"
 # VSF frontend
+export PROJECT_NAME="${MAGE_HOST}"
 export VSF_FRONT_SERVER_IP="127.0.0.1"
 export VSF_FRONT_SERVER_PORT="3100"
-export VSF_FRONT_WEB_HOST="front.vsf.demo.com"
-export VSF_FRONT_WEB_PROTOCOL="http"
+export VSF_FRONT_WEB_HOST="front.vsf.${MAGE_HOST}"
+export VSF_FRONT_WEB_PROTOCOL="https"
 
 # VSF API
 export VSF_API_SERVER_IP="127.0.0.1"
 export VSF_API_SERVER_PORT="3130"
-export VSF_API_WEB_HOST="api.vsf.demo.com"
-export VSF_API_WEB_PROTOCOL="http"
+export VSF_API_WEB_HOST="api.vsf.${MAGE_HOST}"
+export VSF_API_WEB_PROTOCOL="https"
 
 # Redis
 export REDIS_HOST="127.0.0.1"
@@ -26,14 +32,10 @@ export ES_HOST="127.0.0.1"
 export ES_PORT="9200"
 export ES_API_VERSION="7.2"
 export ES_URL="http://${ES_HOST}:${ES_PORT}"
-export ES_INDEX_NAME="vue_demo"
+export ES_INDEX_NAME="vue_demo_magento_mnt"
 
-# Magento
-export MAGE_HOST="magento.demo.com"
-export MAGE_URL_REST="http://${MAGE_HOST}/rest"
-export MAGE_URL_IMG="http://${MAGE_HOST}/media/catalog/product"
 # Magento API access
-export MAGE_API_CONSUMER_KEY="87ufsjl20l5lrub7j1k041a7aoxafmvm"
-export MAGE_API_CONSUMER_SECRET="7fi88hdlp3ibtfr2bwf0395xhtuvu6zu"
-export MAGE_API_ACCESS_TOKEN="xxsa70xlqo3zmksy858h663p8hr19dbv"
-export MAGE_API_ACCESS_TOKEN_SECRET="hmhfyxs5dkd70cna5p49g6oiju8xctk0"
+export MAGE_API_CONSUMER_KEY="psr5qsw5dqccaqkcd9g6un26u0t4gt23"
+export MAGE_API_CONSUMER_SECRET="i0hoqr37lyys38ikft34l9siy8odsqlw"
+export MAGE_API_ACCESS_TOKEN="708bb87l7jyrvy4dxhqn7tsd40ang8rf"
+export MAGE_API_ACCESS_TOKEN_SECRET="v3znn14fhtj7majjwopysnkke8mgnsll"
